@@ -1,0 +1,16 @@
+<ng-sidebar-container>
+  <ng-sidebar  [opened]="sideBarOpenClose">
+    <p>Sidebar Contents</p>
+    <ul class="menu no-bullets">
+      <li><a routerLink="/" (click)="toggleOpenClose()">Dashboard</a></li>
+      <li><a routerLink="/posts" (click)="toggleOpenClose()">Posts</a></li>
+      <li><a routerLink="/contacts" (click)="toggleOpenClose()">Contact</a></li>
+    </ul>
+  </ng-sidebar>
+  <div ng-sidebar-content>
+    <button (click)="toggleOpenClose()">
+      Open Sidebar
+    </button>
+    <router-outlet></router-outlet>
+  </div>
+</ng-sidebar-container>
